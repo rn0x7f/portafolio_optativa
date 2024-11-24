@@ -7,10 +7,11 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const pages = [
-  "Esta es la primera página del libro. Aquí comienza nuestra historia...",
-  "En la segunda página, la trama se desarrolla y los personajes toman forma...",
-  "La tercera página nos lleva a nuevas aventuras y descubrimientos...",
-  "En la cuarta página, nos acercamos al clímax de la historia...",
+  ".", // Front cover
+  "Contextualización",
+  "Inmersión & Mockup",
+  "Prototipo",
+  "Pitch",
 ]
 
 export default function OpenBookBackground() {
@@ -46,7 +47,7 @@ export default function OpenBookBackground() {
               transition={{ duration: 0.5 }}
               className="w-full h-full"
             >
-              <BookCover title="Mi Libro Mágico" author="Autor Imaginario" />
+              <BookCover title="La inactividad física en México" author="Renato García Morán" notBackCover={true} />
             </motion.div>
           )}
           {currentPage === -2 && (
@@ -58,7 +59,7 @@ export default function OpenBookBackground() {
               transition={{ duration: 0.5 }}
               className="w-full h-full"
             >
-              <BookCover title="Mi Libro Mágico" author="Autor Imaginario" isBackCover={true} />
+              <BookCover title="" author="" />
             </motion.div>
           )}
           {currentPage >= 0 && (
