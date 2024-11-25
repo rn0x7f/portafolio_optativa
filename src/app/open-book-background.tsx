@@ -190,7 +190,7 @@ export default function OpenBookBackground() {
     <div
       className="min-h-screen flex items-center justify-center bg-cover bg-center"
       style={{
-        backgroundImage: `url('/images/wood-texture.jpg')`,
+        backgroundImage: `url('images/wood-texture.jpg')`,
       }}
     >
       <div className="book-container w-full max-w-4xl aspect-[3/2] shadow-2xl relative bg-transparent rounded-lg overflow-hidden">
