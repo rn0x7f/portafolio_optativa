@@ -167,7 +167,7 @@ const pages = [
    },
    { text: "Conclusion",
     textCentered: true,
-    content: "Además para este ultimo portafolio que buscaba observar la creatividad mientras plasmabamos lo que nos hacia ser nosotros mismos, decidí hacer el portafolio escribiendo código a mano, desarrolando una página web desde cero sin utilizar ningún tipo de plantilla ni cosas prehechas, para dar cierre a esta última optativa de mi carrera con un proyecto que me permita hacer uso de las habilidades que he adquirido a lo largo de mi carrera como Ingeniero en Tecnologías Computacionales, enfrentando así mi disgusto por la creación de interfaces gráficas.",
+    content: "Además para este ultimo portafolio que buscaba observar la creatividad mientras plasmabamos lo que nos hacia ser nosotros mismos, decidí hacer el portafolio escribiendo código a mano, desarrollando una página web desde cero sin utilizar ningún tipo de plantilla ni cosas prehechas, para dar cierre a esta última optativa de mi carrera con un proyecto que me permita hacer uso de las habilidades que he adquirido a lo largo de mi carrera como Ingeniero en Tecnologías Computacionales, enfrentando así mi disgusto por la creación de interfaces gráficas.",
     images: [
       { src: 'images/finalcode.png', alt: 'Prototipo final', size: 'w-80 h-50' },
     ],
