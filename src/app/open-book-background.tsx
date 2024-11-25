@@ -19,7 +19,9 @@ const pages = [
       { title: "  2.1 - Reflexión . . . . . . . . . . . . . . . . . 9", page: 9 },
       { title: "3 - Prototipo . . . . . . . . . . . . . . . . . . . . 10", page: 10 },
       { title: "  3.1 - Reflexión . . . . . . . . . . . . . . . . . 11", page: 11 },
-      { title: "4 - Pitch final . . . . . . . . . . . . . . . . . . . .13", page: 13 },
+      { title: "4 - Pitch . . . . . . . . . . . . . . . . . . . . . . . 12", page: 12 },
+      { title: "  4.1 - Reflexión . . . . . . . . . . . . . . . . . 13", page: 13 },
+      { title: "5 - Conclusión . . . . . . . . . . . . . . . . . . 14", page: 14 },
     ],
   },
 
@@ -136,25 +138,51 @@ const pages = [
 
 
   {
-    text: "Pitch final",
-    images: [{ src: 'images/images/prototype.jpg', alt: 'Prototipo final', size: 'w-56 h-56' }],
+    text: "Pitch",
+    textBold: true,
+    textCentered: true,
+    images: [
+      { src: 'images/yo.jpg', alt: 'Prototipo final', size: 'w-80 h-50' },
+      { size: 'w-1 h-90' },
+      { src: 'images/pitch.webp', alt: 'Prototipo final', size: 'w-80 h-50' },
+    ],
   },
+  {
+    text: "Pitch - Reflexión",
+    textBold: true,
+    textCentered: true,
+    content: "Esta actividad me enseñó lo importante que es desarrollar la habilidad de hablar en público, no solo para enfrentar multitudes, sino también para comunicar ideas de manera efectiva. Comprendí que el pitch no es únicamente una presentación, sino una oportunidad para conectar con la audiencia y convencerla del valor de nuestra propuesta. Además, me di cuenta de la facilidad que tenemos para proponer soluciones innovadoras que realmente puedan ayudar a las personas. Este ejercicio fortaleció mi confianza para defender mis ideas y me inspiró a seguir buscando maneras de resolver problemas cotidianos a través del uso de la creatividad.",
+    contentBold: false,
+    contentCentered: false,
+  },
+
+
+
+
+
   { text: "Conclusion",
-    images: [{ src: 'images/mockup3.jpg', alt: 'Vista principal', size: 'w-40 h-40' }],
+    textBold: true,
+    textCentered: true,
+    content: "A lo largo de este último periodo hicimos todo tipo de actividades, desde analizar cómo los medios influyen en nuestros hábitos, hasta desarrollar prototipos que promuevan el ejercicio, personalmente aprendí que la solución a este problema no es cuestión faltas de tiempo, sino de cambiar prioridades y rutinas. Dicho de otra forma, tratar de forzar que el ejercicio sea una necesidad. Descubrí que la creatividad y la innovación pueden ser herramientas poderosas para motivar a las personas a adoptar estilos de vida más saludables. Enfrentar el reto de comunicar estas ideas a una audiencia, ya sea a través de un pitch o al probar prototipos, me permitió entender la importancia del desarrollo de este tipo de habilidades sociales. Este proyecto no solo fortaleció mis habilidades para hacer una presentación, sino que también me hizo reflexionar sobre cómo puedo usar la tecnología como un medio para generar un impacto positivo en la sociedad.",
+   },
+   { text: "Conclusion",
+    textCentered: true,
+    content: "Además para este ultimo portafolio que buscaba observar la creatividad mientras plasmabamos lo que nos hacia ser nosotros mismos, decidí hacer el portafolio escribiendo código a mano, desarrolando una página web desde cero sin utilizar ningún tipo de plantilla ni cosas prehechas, para dar cierre a esta última optativa de mi carrera con un proyecto que me permita hacer uso de las habilidades que he adquirido a lo largo de mi carrera como Ingeniero en Tecnologías Computacionales, enfrentando así mi disgusto por la creación de interfaces gráficas.",
+    images: [
+      { src: 'images/finalcode.png', alt: 'Prototipo final', size: 'w-80 h-50' },
+    ],
    },
 ];
 
 export default function OpenBookBackground() {
-  const [currentPage, setCurrentPage] = useState(-1); // -1: front cover, -2: back cover
+  const [currentPage, setCurrentPage] = useState(-1);
 
-  const totalPages = pages.length; // Total number of pages
+  const totalPages = pages.length;
 
   const nextPage = () => {
     if (currentPage === -1) {
-      // Move from front cover to first page
       setCurrentPage(0);
     } else if (currentPage >= 0 && currentPage < totalPages - 2) {
-      // Move forward by two pages
       setCurrentPage(currentPage + 2);
     } else if (currentPage >= totalPages - 2) {
       // Move to back cover
@@ -164,19 +192,15 @@ export default function OpenBookBackground() {
 
   const prevPage = () => {
     if (currentPage === -2) {
-      // Move from back cover to last content pages
       setCurrentPage(totalPages % 2 === 0 ? totalPages - 2 : totalPages - 1);
     } else if (currentPage > 1) {
-      // Move back by two pages
       setCurrentPage(currentPage - 2);
     } else if (currentPage === 0 || currentPage === 1) {
-      // Move to front cover
       setCurrentPage(-1);
     }
   };
 
   const goToPage = (pageNumber: number) => {
-    // Ensure the page number is valid and adjust for pairs
     const targetPage =
       pageNumber >= 0 && pageNumber < totalPages
         ? pageNumber % 2 === 0
@@ -185,7 +209,6 @@ export default function OpenBookBackground() {
         : 0;
     setCurrentPage(targetPage);
   };
-
   return (
     <div
       className="min-h-screen flex items-center justify-center bg-cover bg-center"
