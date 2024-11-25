@@ -28,7 +28,7 @@ const pages = [
     textBold: true,
     textCentered: true,
     images: [
-      { src: '/musica0.png', alt: 'Musica', size: 'w-80 h-90' },
+      { src: 'images/musica0.png', alt: 'Musica', size: 'w-80 h-90' },
     ],
   },
   {
@@ -40,10 +40,10 @@ const pages = [
         size: 'w-80 h-90',
       },
       { size: 'w-1 h-90' },
-      { src: '/papas1.jpg', alt: 'Musica', size: 'w-15 h-15' },
-      { src: '/papas2.jpeg', alt: 'Musica', size: 'w-15 h-15' },
-      { src: '/papas3.jpg', alt: 'Musica', size: 'w-15 h-15' },
-      { src: '/papas4.jpg', alt: 'Musica', size: 'w-15 h-15' },
+      { src: 'images/papas1.jpg', alt: 'Musica', size: 'w-15 h-15' },
+      { src: 'images/papas2.jpeg', alt: 'Musica', size: 'w-15 h-15' },
+      { src: 'images/papas3.jpg', alt: 'Musica', size: 'w-15 h-15' },
+      { src: 'images/papas4.jpg', alt: 'Musica', size: 'w-15 h-15' },
     ],
   },
   {
@@ -55,7 +55,7 @@ const pages = [
         size: 'w-80 h-90',
       },
       { size: 'w-1 h-90' },
-      { src: '/musica1.png', alt: 'Musica', size: 'w-80 h-90' },
+      { src: 'images/musica1.png', alt: 'Musica', size: 'w-80 h-90' },
     ],
   },
   {
@@ -75,26 +75,26 @@ const pages = [
     textBold: true,
     textCentered: true,
     images: [
-      { src: '/mockup1.png', alt: 'Mockup inicial', size: 'w-80 h-90' },
+      { src: 'images/mockup1.png', alt: 'Mockup inicial', size: 'w-80 h-90' },
       { size: 'w-1 h-90' },
-      { src: '/mockup0.jpg', alt: 'Mockup inicial', size: 'w-80 h-90' }
+      { src: 'images/mockup0.jpg', alt: 'Mockup inicial', size: 'w-80 h-90' }
     ],
   },
   {
     text: "Inmersión & Mockup",
     images: [
-      { src: '/mockup2.png', alt: 'Mockup inicial', size: 'w-80 h-90' },
+      { src: 'images/mockup2.png', alt: 'Mockup inicial', size: 'w-80 h-90' },
       { size: 'w-1 h-90' },
-      { src: '/mockup3.png', alt: 'Mockup inicial', size: 'w-80 h-90' },
+      { src: 'images/mockup3.png', alt: 'Mockup inicial', size: 'w-80 h-90' },
     ],
   },
   {
     text: "Inmersión & Mockup",
     images: [
-      { src: '/proto1.jpeg', alt: 'Mockup inicial', size: 'w-25 h-30' },
-      { src: '/proto2.jpeg', alt: 'Mockup inicial', size: 'w-25 h-30' },
-      { src: '/proto3.jpeg', alt: 'Mockup inicial', size: 'w-25 h-30' },
-      { src: '/proto4.jpeg', alt: 'Mockup inicial', size: 'w-25 h-30' },
+      { src: 'images/proto1.jpeg', alt: 'Mockup inicial', size: 'w-25 h-30' },
+      { src: 'images/proto2.jpeg', alt: 'Mockup inicial', size: 'w-25 h-30' },
+      { src: 'images/proto3.jpeg', alt: 'Mockup inicial', size: 'w-25 h-30' },
+      { src: 'images/proto4.jpeg', alt: 'Mockup inicial', size: 'w-25 h-30' },
     ],
   },
   {
@@ -118,7 +118,7 @@ const pages = [
         size: 'w-80 h-90',
       },
       { size: 'w-1 h-90' },
-      { src: '/prototype0.jpg', alt: 'Vista principal', size: 'w-80 h-90' },
+      { src: 'images/prototype0.jpg', alt: 'Vista principal', size: 'w-80 h-90' },
       { size: 'w-1 h-90' },
     ],
    },
@@ -137,10 +137,10 @@ const pages = [
 
   {
     text: "Pitch final",
-    images: [{ src: '/images/prototype.jpg', alt: 'Prototipo final', size: 'w-56 h-56' }],
+    images: [{ src: 'images/images/prototype.jpg', alt: 'Prototipo final', size: 'w-56 h-56' }],
   },
   { text: "Conclusion",
-    images: [{ src: '/images/mockup3.jpg', alt: 'Vista principal', size: 'w-40 h-40' }],
+    images: [{ src: 'images/mockup3.jpg', alt: 'Vista principal', size: 'w-40 h-40' }],
    },
 ];
 
@@ -190,7 +190,7 @@ export default function OpenBookBackground() {
     <div
       className="min-h-screen flex items-center justify-center bg-cover bg-center"
       style={{
-        backgroundImage: `url('../../wood-texture.jpg')`,
+        backgroundImage: `url('/images/wood-texture.jpg')`,
       }}
     >
       <div className="book-container w-full max-w-4xl aspect-[3/2] shadow-2xl relative bg-transparent rounded-lg overflow-hidden">
